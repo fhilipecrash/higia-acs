@@ -1,0 +1,1 @@
+import{j as o}from"./index-DgVgUKUG.js";import{I as n}from"./index-oUHHZH__.js";const r=()=>o.jsxs("form",{children:[o.jsx(n,{placeholder:"Login"}),o.jsx(n,{placeholder:"Senha"})]});function s(){return o.jsx(r,{})}export{s as component};
