@@ -5,7 +5,7 @@ import { tanstackRouter } from '@tanstack/router-plugin/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: '/higia-acs/',
+  base: '/higia-acs/',
   plugins: [
     tanstackRouter({
       target: 'react',
