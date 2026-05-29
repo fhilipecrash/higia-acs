@@ -33,7 +33,22 @@ export const CitizenForm = () => {
     handleSubmit,
     formState: { errors }
   } = useForm({
-    resolver: zodResolver(citizenFormSchema)
+    resolver: zodResolver(citizenFormSchema),
+    defaultValues: {
+      birth_country_code: "",
+      birth_municipality_ibge_code: "",
+      birth_date: "",
+      citizen_cns: "",
+      citizen_cpf: "",
+      father_name: "",
+      full_name: "",
+      gender_code: "",
+      gender_identity_code: "",
+      mother_name: "",
+      occupation_cbo_code: "",
+      race_color_code: "",
+      social_name: ""
+    }
   })
 
   const onSubmit = (form: CitizenFormType) => {

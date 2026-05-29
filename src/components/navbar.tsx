@@ -1,14 +1,25 @@
 import { Link } from '@tanstack/react-router'
+import { buttonVariants } from "@heroui/react"
+
+const pages = [
+  { label: "Form", link: "/" },
+  { label: "Login", link: "/login" },
+]
 
 export const NavBar = () => {
   return (
     <div>
-      <Link to="/" className="[&.active]:font-bold">
-        Form
-      </Link>
-      <Link to="/login" className="[&.active]:font-bold">
-        Login
-      </Link>
+      {pages.map(({ label, link }) => {
+        return <Link
+          className={`
+            ${buttonVariants({ size: "lg", variant: "ghost" })}
+          `}
+          activeProps={{ className: buttonVariants({ size: "lg", variant: "outline" }) }}
+          to={link}
+        >
+          {label}
+        </Link>
+      })}
     </div>
   )
 }
