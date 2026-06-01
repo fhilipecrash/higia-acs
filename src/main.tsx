@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { routeTree } from './routeTree.gen'
+import { Toast } from '@heroui/react'
 
 const router = createRouter({
   routeTree,
@@ -20,6 +21,7 @@ if (!rootElement.innerHTML) {
   root.render(
     <StrictMode>
       <RouterProvider router={router} />
+      <Toast.Provider placement='bottom end' />
     </StrictMode>,
   )
 }

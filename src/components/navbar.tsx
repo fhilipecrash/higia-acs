@@ -13,7 +13,7 @@ export function NavBar() {
       <div>
         {pages.map(({ label, link }) => {
           return <Link
-            id={label.toLowerCase()}
+            key={label.toLowerCase()}
             className={`
               ${buttonVariants({ size: "lg", variant: "ghost" })}
             `}

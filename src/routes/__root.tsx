@@ -11,8 +11,8 @@ function RootComponent() {
   return (
     <React.Fragment>
       <NavBar />
-      <PWABadge />
       <Outlet />
+      <PWABadge />
     </React.Fragment>
   )
 }
