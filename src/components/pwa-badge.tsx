@@ -3,7 +3,7 @@ import { toast } from '@heroui/react'
 import { RefreshCw } from 'lucide-react'
 import { useEffect } from 'react'
 
-function PWABadge() {
+export function PWABadge() {
   // periodic sync is disabled, change the value to enable it, the period is in milliseconds
   // You can remove onRegisteredSW callback and registerPeriodicSync function
   const period = 0
@@ -45,8 +45,6 @@ function PWABadge() {
 
   return <></>
 }
-
-export default PWABadge
 
 /**
  * This function will register a periodic sync check every hour, you can modify the interval as needed.

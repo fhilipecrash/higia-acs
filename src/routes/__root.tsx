@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 import { NavBar } from '@/components/navbar'
-import PWABadge from '@/PWABadge'
+import { PWABadge } from '@/components/pwa-badge'
 
 export const Route = createRootRoute({
   component: RootComponent,
