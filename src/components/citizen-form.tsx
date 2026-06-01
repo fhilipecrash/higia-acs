@@ -4,7 +4,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { citizenFormSchema, type CitizenFormType } from '@/types/citizen-form';
 
-interface FormFieldConfig {
+type FormFieldConfig = {
   name: keyof CitizenFormType;
   label: string;
   placeholder: string;
@@ -27,7 +27,7 @@ const FORM_FIELDS: FormFieldConfig[] = [
   { name: 'occupation_cbo_code', label: 'Código CBO Ocupação', placeholder: '2541', type: 'text' },
 ]
 
-export const CitizenForm = () => {
+export function CitizenForm() {
   const {
     control,
     handleSubmit,
@@ -56,7 +56,10 @@ export const CitizenForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-3">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="grid grid-cols-1 sm:grid-cols-3 p-5 rounded-2xl shadow-2xl"
+    >
       {FORM_FIELDS.map((field) => (
         <Controller
           key={field.name}
@@ -68,7 +71,7 @@ export const CitizenForm = () => {
 
             return (
               <div className="flex flex-col gap-1">
-                <Label htmlFor={fieldId}>{field.label}</Label>
+                <Label className='flex-row flex' htmlFor={fieldId}>{field.label}</Label>
                 <Input
                   {...fieldProps}
                   id={fieldId}

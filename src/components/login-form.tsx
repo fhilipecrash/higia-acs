@@ -1,6 +1,6 @@
 import { Input } from "@heroui/react"
 
-export const LoginForm = () => {
+export function LoginForm() {
   return (
     <form>
       <Input placeholder="Login" />
