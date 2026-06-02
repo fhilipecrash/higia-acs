@@ -1,1 +1,0 @@
-import{j as o,B as r}from"./index-BurJxBE6.js";import{I as n}from"./index-C3fNIeB1.js";function t(){return o.jsxs("form",{children:[o.jsx(n,{placeholder:"Login"}),o.jsx(n,{placeholder:"Senha"}),o.jsx(r,{children:"Login"})]})}function i(){return o.jsx(t,{})}export{i as component};
