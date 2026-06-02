@@ -7,6 +7,6 @@ export const Route = createFileRoute('/')({
 
 function RouteComponent() {
   return <div className='flex justify-center'>
-      <CitizenForm />
-    </div>
+    <CitizenForm />
+  </div>
 }

@@ -39,7 +39,6 @@ export function PWABadge() {
         timeout: 0,
         onClose: () => setNeedRefresh(false)
       })
-      setNeedRefresh(false)
     }
   }, [needRefresh, setNeedRefresh, updateServiceWorker])
 

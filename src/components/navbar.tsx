@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router'
-import { buttonVariants } from "@heroui/react"
+import { Button, buttonVariants } from "@heroui/react"
 import { ThemeSwitcher } from '@/components/theme-switcher'
+import { useNotification } from '@/hooks/useNotification';
 
 const pages = [
   { label: "Form", link: "/" },
@@ -8,6 +9,8 @@ const pages = [
 ]
 
 export function NavBar() {
+  const { notify } = useNotification();
+
   return (
     <div className='flex justify-between'>
       <div>
@@ -24,7 +27,17 @@ export function NavBar() {
           </Link>
         })}
       </div>
-      <ThemeSwitcher />
+      <div>
+        <Button onClick={() => {
+          notify("Pedido confirmado! 🎉", {
+            body: "Seu pedido #1234 foi aprovado.",
+            icon: "/logo.png"
+          });
+        }}>
+          Enviar notificação
+        </Button>
+        <ThemeSwitcher />
+      </div>
     </div>
   )
 }

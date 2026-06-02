@@ -2,7 +2,7 @@ import { Button, useTheme } from "@heroui/react";
 import { Sun, Moon } from "lucide-react";
 
 export function ThemeSwitcher() {
-  const { resolvedTheme, setTheme } = useTheme("system");
+  const { resolvedTheme, setTheme } = useTheme(localStorage.getItem("userTheme") ?? "system");
 
   return (
     <Button

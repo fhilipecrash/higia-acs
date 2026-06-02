@@ -37,7 +37,7 @@ export function CitizenForm() {
     defaultValues: {
       birth_country_code: "",
       birth_municipality_ibge_code: "",
-      birth_date: "",
+      birth_date: new Date().toLocaleString(),
       citizen_cns: "",
       citizen_cpf: "",
       father_name: "",
@@ -58,7 +58,7 @@ export function CitizenForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="grid grid-cols-1 sm:grid-cols-3 p-5 rounded-2xl shadow-2xl"
+      className="grid grid-cols-1 sm:grid-cols-3 p-5 rounded-2xl shadow-2xl gap-2"
     >
       {FORM_FIELDS.map((field) => (
         <Controller
