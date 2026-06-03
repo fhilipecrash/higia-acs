@@ -2,6 +2,7 @@ import { Link } from '@tanstack/react-router'
 import { Button, buttonVariants } from "@heroui/react"
 import { ThemeSwitcher } from '@/components/theme-switcher'
 import { useNotification } from '@/hooks/useNotification';
+import { toast } from '@heroui/react';
 
 const pages = [
   { label: "Form", link: "/" },
@@ -28,6 +29,14 @@ export function NavBar() {
         })}
       </div>
       <div>
+        <Button onClick={() => {
+          toast("Toast de teste", {
+            description: "Teste",
+            timeout: 5000,
+          })
+        }}>
+          Enviar toast
+        </Button>
         <Button onClick={() => {
           notify("Pedido confirmado! 🎉", {
             body: "Seu pedido #1234 foi aprovado.",
